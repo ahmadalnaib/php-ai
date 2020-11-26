@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #222324;
+  color: #fff;
+}
+
+.robot-table {
+  font-weight: 400;
+  font-size: 1.2rem;
+  background: #36393a;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.text-direction{
+  text-align: right;
+}
+
+
+
+

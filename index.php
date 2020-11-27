@@ -10,7 +10,20 @@
 <body>
 
 <?php
-$isLoggedIn=true;
+include_once './classes/robot.class.php';
+
+$ahmed=new Robot('ahmed','php-laravel','faheem.png',array('what is noveLaravel',"node or laravel"),array('laravel admin','laravel'));
+
+
+$zozo=new Robot('zozo','react-php','sportsman.png',array('what is express',"node or c#"),array('node frame work','c#'));
+
+
+$bobo=new Robot('zozo','react-php','sportsman.png',array('what is express',"node or c#"),array('node frame work','c#'));
+
+
+$robots=[$ahmed,$zozo,$bobo];
+
+$isLoggedIn=false;
 
 ?>
 
@@ -44,66 +57,38 @@ $isLoggedIn=true;
     </ul>
   </div>
 </nav>
-<div class="container">
 
-  <div class="row">
-
-    <div class="col-sm-8 p-3">
-    <table class="table table-dark shadow  text-center p-3">
-
-          <tr class="bg-warning">
-          <th >المجموعة الاولى</th>
-          <th >المجموعة الثانية</th>
-          </tr>
-
-          <tr>
-          <td>فهيم</td>
-          <td>رياضي</td>
-          </tr>
-
-          <tr >
-          <td><img src="assets/images/chemist.png" alt="" width="100px">
-          <ul>
-          <li>كيميايي</li>
-          <li>متخصص في علوم الكيمياء</li>
-          </ul></td>
-
-          <td>
-          <img src="assets/images/chemist.png" alt="" width="100px">
-          <ul>
-          <li>كيميايي</li>
-          <li>متخصص في علوم الكيمياء</li>
-          </ul>
-          </td> 
-          
-
-          </tr>
-          </table>
-              </div>
-
-              <div class="col-sm-4 p-3 text-direction">
-
-                <?php if(!$isLoggedIn) : ?>
-              <form>
+<form>
   <div class="form-group">
-    <label for="exampleInputEmail1">البريد الالكتروني</label>
-    <input type="email" class="form-control text-direction" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-    <small id="emailHelp" class="form-text text-light">لن نقوم بمشاركه البريد الالكتروني مع شخص ما.</small>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">كلمه المرور</label>
-    <input type="password" class="form-control text-direction" id="exampleInputPassword1" name="password">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
  
-  <button type="submit" class="btn btn-primary">دخول</button>
-</form>   
-            <?php else :
-            echo "مرحبا بيك مجدد"
-             ?>
-                <?php endif; ?>
-              </div>
-              
-            </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+ <hr>
+<div class="container">
+<div class="grid-main">
+
+  <?php foreach($robots as $robot): ?>
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="<?php echo "assets/images/".$robot->image  ?>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title text-dark"><?php echo $robot->name ?></h5>
+      <p class="card-text  text-dark"><?php echo $robot->spec ?></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <?php endforeach; ?>
+</div>
+
+        
           </div>
 
 

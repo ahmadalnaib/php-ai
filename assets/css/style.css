@@ -28,6 +28,21 @@ li {
   text-align: right;
 }
 
+.grid-main {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1rem;
+padding-top: 1rem;
+  
 
 
+}
 
+.grid-main img{
+  width: 100px;
+}
+
+
+form {
+  padding: 2rem 4rem;
+}

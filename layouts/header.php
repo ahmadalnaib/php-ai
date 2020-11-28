@@ -1,5 +1,6 @@
 <?php require_once('./classes/db.class.php') ;
 $db=new Db();
+$db->allRobots();
 
 ?>
 <!DOCTYPE html>

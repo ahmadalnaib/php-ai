@@ -38,7 +38,7 @@ padding-top: 1rem;
 
 }
 
-.grid-main img{
+.grid-main, .card img{
   width: 100px;
 }
 

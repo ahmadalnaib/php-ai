@@ -13,8 +13,15 @@ $bobo1=new Robot('zozo1','react-php','sportsman.png',array('what is express',"no
 
 
 $robots=[$ahmed,$zozo,$bobo,$bobo1];
-$robot=$robots[2];
 
-$isLoggedIn=false;
+if(isset($_GET['robot']))
+{
+  $robot=$robots[$_GET['robot']];
+} else{
+
+  $robot=$robots[2];
+}
+
+
 
 ?>

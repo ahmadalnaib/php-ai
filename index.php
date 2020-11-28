@@ -25,7 +25,7 @@ require_once('./robotInit.php');
       <div class="card-body">
         <h5 class="card-title text-dark"><?php echo $robot->name ?></h5>
         <p class="card-text  text-dark"><?php echo $robot->spec ?></p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="details.php?rotbot=<?=$robot ?>" class="btn btn-primary">more</a>
       </div>
     </div>
     <?php endforeach; ?>

@@ -1,3 +1,7 @@
+<?php require_once('./classes/db.class.php') ;
+$db=new Db();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
